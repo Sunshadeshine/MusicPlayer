@@ -15,20 +15,16 @@
    }
 
 body{
-
-  /* background-image: url("https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"); */
-  /* filter: brightness(120%);
-     filter: contrast(200%); */
-     background-image: url("https://i.ibb.co/Wx6w7GJ/B-2.jpg");
-
+ background-image: url("https://i.ibb.co/Wx6w7GJ/B-2.jpg");
  background-repeat: no-repeat;
  background-attachment:fixed;
  background-position: center;
- /* background-color: black; */
  background-size:cover;
+ background-color: #0a0318;
   height:100vh;
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 header{
   height: auto;
@@ -38,6 +34,7 @@ header{
   box-shadow: grey  0px 0.5px 6px 0px;
 /* ox-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px; */
 }
+
 #logo{
 width: 15%;
 height: auto;
@@ -129,12 +126,22 @@ i:hover{
 /* -------------------------------------------------------------- */
 main{
   margin-top: 70px;
-  height: auto;
+  height: 70vh;
   margin-left: 6%;
-  width: 65vw;
+  width: 68vw;
   display: inline-block;
+  overflow: scroll;
 }
-
+main::-webkit-scrollbar{
+  visibility: hidden;
+}
+aside{
+  overflow: scroll;
+  height: 83vh;
+}
+aside::-webkit-scrollbar{
+  visibility: hidden;
+}
 .section-head{
   font-size: 1.5rem;
   color: white;
@@ -197,7 +204,7 @@ height: 40vh;
 }
 .popular-artist{
   width: 65vw;
-  m
+  
 }
 .artist{
 color: white;
@@ -218,8 +225,8 @@ font-family: 'Dosis', sans-serif;
 .Music-theme1{
     margin-top: 0px;
   background-color: #160040;
-  /* opacity: 0.5; */
   width: 60vw;
+ 
 }
 .theme-container{
   margin: 100px 0px 50px 0px;
@@ -228,23 +235,68 @@ font-family: 'Dosis', sans-serif;
   flex-wrap: wrap;
   justify-content:center;
   align-items:center;
-
+ padding:20px 0px 20px 0px;
+ 
+}
+.theme2{
+  text-align: center;
+  width:32%;
+  
 }
 .theme2 img{
 width: 100%;
-height: inherit;
+cursor: pointer;
+/* height: auto; */
+}
+.theme2 p {
+display:inline-block;
+font-family: 'Dosis', sans-serif;
+color:white;
+letter-spacing: 0.4rem;
+font-size: 1.3rem;
+position: relative;
+top: -50%;
+margin: 0%;
+cursor: pointer;
+}
+.theme2 p:hover{
+  transform: scale(1.5);
 }
 .Music-theme2{
-
   width: 60vw;
-  display: grid;
-  grid-template-columns: auto auto auto;
+  display: flex;
+  /* grid-template-columns: auto auto auto; */
   gap:10px;
+  /* flex-wrap: wrap; */
+
+}
+.theme{
+  width:85px;
+  height: 85px;
+ text-align: center;
 }
 .theme img{
-  width:90px;
-  height: 90px;
+  height: inherit;
+  width:inherit;
   border-radius: 50%;
+  opacity: 0.79;
+}
+.theme p{
+z-index:1;
+position: relative;
+top: -70%;
+display:inline-block;
+font-family: 'Dosis', sans-serif;
+color:white;
+font-size: 1.1rem;
+letter-spacing: 0.1rem;
+margin: 0%;
+}
+.theme img:hover{
+background-color:rgb(219, 107, 107) ;
+opacity: 0.2;
+cursor: pointer;
+
 }
 .latest-english{
   width:61vw;
@@ -264,7 +316,10 @@ height: inherit;
   flex-direction:column;
   font-family: 'Dosis', sans-serif;
   gap:10px;
-
+cursor: pointer;
+}
+.a-c{
+    text-align: center;
 }
 .img-container img{
   height: 135px;
@@ -285,7 +340,8 @@ height: inherit;
   margin-left: -50px;
 }
 .carousel img{
-  width:350px;}
+  width:350px;
+  cursor: pointer;}
   .dropbtn {
 
     color: white;
@@ -311,7 +367,7 @@ height: inherit;
     z-index: 1;
   }
   #playBack{
-    width: 20vw;
+    width: 25vw;
     display: inline-block;
     vertical-align: top;
     position: sticky;
@@ -377,7 +433,7 @@ color:white;
 
   /* Change the background color of the dropdown button when the dropdown content is shown */
 
-}
+
 #c1,#c3{
   z-index:-1;
 }
@@ -471,7 +527,69 @@ z-index:2;
   -ms-transform: translate(-50%, -50%);
   text-align: center;
 }
-
+.img-container  i{
+  z-index: 2;
+font-size: 4rem;
+color: transparent;
+position: absolute;
+}
+.img-container:hover i{
+  color:rgb(34, 23, 23);
+  opacity: 0.7;
+ transform: translate(-180%, 65%);
+}
+.img-container:hover img{
+   transform: scale(1.3);
+}
+.img-details{
+  text-align: left;
+}
 /* .fa-user:hover {
   color: #eee;
 } */
+.Play_Screen{
+position: sticky;
+    bottom: 0;
+width:100vw;
+height: 60px;
+background-color:rgb(26, 25, 25);
+}
+.Play_Screen_container{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.Play_Image{
+  height: 55px;
+  padding: 0px 30px 0px 30px;
+}
+.Play_Image img{
+  width: inherit;
+  height: inherit;
+}
+.Play_song_details{
+  height: auto;
+ padding:0 15px 0 15px;
+ color: white;
+  font-family: 'Dosis', sans-serif;
+
+}
+/* Audio */
+
+audio{
+  height: 40px;
+  width: 950px;
+  border-radius: 0%;/* not working*/
+  /* background-color: #0a0318; */
+  
+}
+audio::-webkit-media-controls{
+  width: inherit;
+  height: inherit;
+
+}
+audio::-webkit-media-controls-enclosure {
+  
+  background-color:transparent;
+ 
+}
