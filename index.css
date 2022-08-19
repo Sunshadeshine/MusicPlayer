@@ -147,13 +147,9 @@ aside::-webkit-scrollbar{
   color: white;
   font-family: 'Dosis', sans-serif;
 }
-.showcase{
-
-
+.show{
 width:50vw;
 height: 40vh;
-
-
 }
 .latest-release{
     width:50vw;
