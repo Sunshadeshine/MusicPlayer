@@ -15,7 +15,7 @@
    }
 
 body{
- background-image: url("https://i.ibb.co/Wx6w7GJ/B-2.jpg");
+ /* background-image: url("https://i.ibb.co/Wx6w7GJ/B-2.jpg"); */
  background-repeat: no-repeat;
  background-attachment:fixed;
  background-position: center;
@@ -125,7 +125,7 @@ i:hover{
 /* showcase */
 /* -------------------------------------------------------------- */
 main{
-  margin-top: 70px;
+  margin-top: 50px;
   height: 70vh;
   margin-left: 6%;
   width: 68vw;
@@ -362,7 +362,7 @@ cursor: pointer;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
   }
-  #playBack{
+aside{
     width: 25vw;
     display: inline-block;
     vertical-align: top;
